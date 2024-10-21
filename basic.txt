@@ -1,0 +1,37 @@
+move the homedir --> usermod -md /share/abhi abhi
+change default shell of the user --> #chsh -s <shell path> username
+                                     # usermod -s <shell path> username
+routing table #netstat -rn
+major version and minor version --> 6 major,6.0 minor
+how to see file are dir permission numberic #stat -c % "a" <file,dir>
+how to set default runlevel #/etc/intitab
+authorized_keys permission #600
+ssh permissions #700
+sized file #dd and fallocate
+ip addres all
+/etc/passwd default permission #644
+/etc/shadow permission #000
+passwd command file permission #4755
+how many ways nullify a file #cat > filename ;truncate -s filename ; cat /dev/null filename
+how to kill process till completing --> kill -15 <pid> sigterm
+how to up & down a ip --> ifup & ifdown <nic>
+how many ips can a nic card contain # 10
+how to change gid of group #groupmod -g newid groupname
+how to verifiy badblocks       #badblocks -v /dev/sda #dumpe2fs device |grep -i state
+how to get linux information #uname -a
+maximum pertions of treditional =59
+nslookup ip use --> domin information
+how to re-read the partition table --> after unmount partprobe <device name>
+how to change the new uid -->
+ethrnet adapters name change --> /etc/udev/rules.d/70-persistent-net.rules and reboot
+root home dir permisiion #550
+how to build server in vitual inveronment -->
+how to use specify ip when when we have multiple --> /etc/ssh/sshd_config
+/etc/shadow outfilds --> 
+port numbers
+how to set date --> #date -s <date>
+how to set random uuid --> tune2fs -U random <device name>
+
+ 
+									 
+									 
