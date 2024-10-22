@@ -1,0 +1,77 @@
+moving user home directory      	   	---> usermod -m -d <path> <username>
+changing default shell of the user	   	---> chsh -s <shellpath> <username>
+routing table 						   	---> netstat -rn
+major version & minor version in linux 	---> 6,6.0 : 7,7.0 : 8,8.0
+view permissions in numerical value		--->  stat -c %"a" /root/new
+How to set a default run level			---> /etc/inittab
+authorized keys & .ssh dir permissions 	---> 600 : 700
+sized file 								---> dd & fallocate
+IP Ranges	 							---> Public : Private
+passwd file permissions					---> 644
+shadow file permissions					---> 000
+passwd command file permissions			---> 4755
+mounted FS information					---> mount, df -h 
+nullify a file 							---> cat /dev/null > <filename> ; cat > <filename> ; truncate -s <filename>; > <filename>
+no one should kill ps its completion 	---> kill -15 <PID> - sigterm
+how to up & down a ip 					---> ifup ; ifdown <nic>
+how many ips can a nic card contain     ---> 10
+how to change a gid of group			---> groupmod -g gid groupname
+how to verify badblocks					---> dumpe2fs <devicename>|grep -i <state> ; badblocks -v <dev name>
+df -h outfields							---> Filesystem      Size  Used Avail Use% Mounted on
+max partitions in traditional FS 		---> 59
+nslookup use 							---> domain information
+reread the partition table				---> after umount - partprobe <dev name>
+root squash /  							---> can't access files as root in client 
+no root squash							---> can access files as root in client server
+how to change the uid 					---> usermod -u <new uid> <username>
+ethernet adapters name change			---> /etc/udev/rules.d/70-persistent-net.rules and the reboot
+Root home directory permissions			---> 550
+how to built a server in virtual env	---> 
+use specific ip when we have multiple	---> /etc/ssh/sshd_config -- #ListenAddress 0.0.0.0
+direct ssh logs in /var/log/messages 	---> /etc/ssh/sshd_config  --  SyslogFacility AUTHPRIV
+create a duplicate user 				---> usermod -o -u <uid> <existing username> <new username>
+etc shadow fields						---> user name : password : last changed : min. days : max. days : warn days : inactive days : expiry days :reserved for future
+port numbers							---> CHECK ALL
+how to modify date						---> date -s <date>
+how to set randow UUID					---> tune2fs -U random <devicename>; uuidgen --- tune2fs -U <uuidgenerated> <devicename>
+how to check files with specific perm	---> ll <path>|grep -i <perm>
+diff b/w sync & async					---> data sync will be live while sync; data sync will be happen after saving a file while async.
+how to configure ntp client with server ---> /etc/ntp.conf ---- ntpdate -u <ip>
+how to check dir in a path 				---> ll <path>|grep -i <^d>; ls -d *<path>
+transfer perm of filr to other file 	---> chmod --reference=<src path> <dest file>
+mathematical calculator					---> bc
+remount a FS 							---> mount -o rw,remount <mountpoint>
+check process running in system			---> ps -ef
+package installation time				---> rpm -qa --last|grep -i <package name>
+setting access to 2 user for a file 	---> setfacl [full study]
+how to create multiple directories		---> mkdir new{1..50}
+create a dir along with parent dir		---> mkdir -p /<parent>/<child>
+FS check/verification 					---> blkid
+check cpu info 							---> lscpu; cat /proc/cpuinfo
+deamons in nis							---> ypserv, ypbind, ypxfrd, yppasswdd
+how to configure NIS [server]			---> /etc/sysconfig/network -- NISDOMAIN=<domainname>
+how to configure NIS [client]			---> setup
+apply same perm child dir = parent dir 	---> chmod -R 777 <parent>
+nfs configuration 						---> reread nfs 11 cases
+how to change max mount count			---> tune2fs -c count <devicename>
+how to foreground a background process 	---> fg <pid>
+passwd attributes all cases modify		---> chage
+diff b/w 2 files	 					---> diff f1 f2
+check
+what are the four types in pam          ---> account,authentication,password,session
+change passwd after next login          ---> chage -d 0 <user>,passwd -e <username> 
+kill a process along with parent process---> kill -9 <PPID> <PID>
+port no for rsync                       ---> 873
+iso filesystem type                     ---> ISO9660
+prot no for NTP                         ---> 123
+default shell for iso                   --->   
+how to restore the acl perm of a dir  	---> we need to take backup before removing the acl's on a file 
+how to backup acl perm 					---> #getfacl f1 > aclbkp_f1
+restoring acl perm 						---> #setfacl --restore=aclbkp_f1 
+deamon for ntp							---> NTPD
+how it works 							---> it synchronizes the time from ntp server.
+lvm config file 						---> /etc/lvm/lvm.conf
+lvm version								---> lvm version 
+if a entry deleted in /etc/passwd how to retrieve data --- /etc/passwd-
+how to copy data from one file to multiple files --- #cat f1 |tee f2 f3 f4 
+from where lvm backup is taken 
